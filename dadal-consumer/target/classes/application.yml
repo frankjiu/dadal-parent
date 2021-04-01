@@ -1,0 +1,16 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: dadal-consumer
+
+dubbo:
+  application:
+    name: user-consumer
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    protocol: zookeeper
+    address: zookeeper://192.168.75.130:2181

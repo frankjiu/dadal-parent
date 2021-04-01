@@ -1,0 +1,22 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: dadal-provider
+
+dubbo:
+  application:
+    name: user-provider
+  protocol:
+    # 协议名称
+    name: dubbo
+    # 协议端口
+    port: 20880
+  registry:
+    # 注册中心协议与地址
+    protocol: zookeeper
+    address: zookeeper://192.168.75.130:2181
+  scan:
+    # 接口包扫描地址
+    base-packages: com.service
